@@ -10,20 +10,54 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <router-link to="/" class="nav-link text-white">Home <span class="sr-only">(current)</span></router-link>
+                    </li>
+
+                    <li class="nav-item active" v-if="this.admin">
+                        <router-link to="/admin/reviews/stored" class="nav-link  text-white">Danh sách bài viết <span
+                                class="sr-only">(current)</span></router-link>
+                    </li>
+
+                    <li class="nav-item active" v-if="this.admin">
+                        <router-link to="/admin/reviews/add" class="nav-link  text-white">Thêm bài viết <span
+                                class="sr-only">(current)</span></router-link>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn bg-warn text-white my-2 my-sm-0" type="submit">Search</button>
-                </form>
+
+
+                <ul class="nav navbar-nav navbar-right d-flex align-items-center" v-if="this.admin">
+                    <li class="nav-item">
+                        <a class="nav-link  text-white" href="#" > {{ this.admin }} <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <router-link to="/" class="btn bg-warn text-white nav-link" v-on:click="logout()">
+                            Đăng xuất
+                            <span class="sr-only">(current)</span>
+                        </router-link>
+                    </li>
+                </ul>
             </div>
         </nav>
     </div>
 </template>
 <script>
 export default {
+    computed: {
+        admin() {
+            const name = JSON.parse(localStorage.getItem("ad"));
+            return name || null;
+        }
+    },
+    methods: {
 
+        logout() {
+            localStorage.clear();
+            this.$router.push('/');
+
+            setTimeout(window.location.reload.bind(window.location), 200)
+        }
+    },
 }
 </script>
 <style scoped>
@@ -36,6 +70,6 @@ export default {
 }
 
 .bg-warn {
-    background-color: rgb(228, 132, 43);
+    background-color: rgb(178, 80, 19);
 }
 </style>

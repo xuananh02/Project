@@ -1,5 +1,5 @@
-const User = require('../models/User');
-const { mongooseToObject, multipleMongooseToObject } = require('../../utils/mongoose.util');
+const Admin = require('../models/admin');
+const { mongooseToObject, multipleMongooseToObject } = require('../../utils/mongoose.js');
 
 class AuthController {
 
@@ -9,7 +9,7 @@ class AuthController {
             const username = req.body.username;
             const password = req.body.password;
             
-            const user = await User.findOne({username})
+            const user = await Admin.findOne({username})
             if(!user) {
                 res.json({ message: 'Wrong username', status: 404 });
             }
@@ -23,7 +23,7 @@ class AuthController {
                 res.json({ user, status: 200 });
             }
         } catch (error) {
-            res.json(err)
+            res.json(error)
         }
     }
 }

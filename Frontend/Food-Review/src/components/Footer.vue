@@ -1,7 +1,8 @@
 <template >
     <div class="footer">
+        <hr />
         <!-- Footer -->
-        <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+        <footer class="page-footer font-small mdb-color lighten-3 pt-4 bg-color">
 
             <!-- Footer Elements -->
             <div class="container">
@@ -14,7 +15,7 @@
 
                         <!--Image-->
                         <div class="view overlay z-depth-1-half">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                            <img src="../assets/img/00.jpg"
                                 class="img-fluid" alt="">
                             <a href="">
                                 <div class="mask rgba-white-light"></div>
@@ -29,7 +30,7 @@
 
                         <!--Image-->
                         <div class="view overlay z-depth-1-half">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).webp"
+                            <img src="../assets/img/01.jpg"
                                 class="img-fluid" alt="">
                             <a href="">
                                 <div class="mask rgba-white-light"></div>
@@ -44,7 +45,7 @@
 
                         <!--Image-->
                         <div class="view overlay z-depth-1-half">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(79).webp"
+                            <img src="../assets/img/02.jpg"
                                 class="img-fluid" alt="">
                             <a href="">
                                 <div class="mask rgba-white-light"></div>
@@ -59,7 +60,7 @@
 
                         <!--Image-->
                         <div class="view overlay z-depth-1-half">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(81).webp"
+                            <img src="../assets/img/03.jpg"
                                 class="img-fluid" alt="">
                             <a href="">
                                 <div class="mask rgba-white-light"></div>
@@ -74,7 +75,7 @@
 
                         <!--Image-->
                         <div class="view overlay z-depth-1-half">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(82).webp"
+                            <img src="../assets/img/04.jpg"
                                 class="img-fluid" alt="">
                             <a href="">
                                 <div class="mask rgba-white-light"></div>
@@ -89,7 +90,7 @@
 
                         <!--Image-->
                         <div class="view overlay z-depth-1-half">
-                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(84).webp"
+                            <img src="../assets/img/05.jpg"
                                 class="img-fluid" alt="">
                             <a href="">
                                 <div class="mask rgba-white-light"></div>
@@ -106,8 +107,8 @@
             <!-- Footer Elements -->
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2023 Copyright:
-                <a href="/"> Green</a>
+            <div class="footer-copyright text-center py-3">
+                <p class="text-white">© 2023 Copyright: Xuan Anh</p>
             </div>
             <!-- Copyright -->
 
@@ -120,4 +121,9 @@ export default {
 
 }
 </script>
-<style scoped></style>
+<style scoped>
+.bg-color{
+    background-color: rgb(186, 99, 37);
+}
+
+</style>
